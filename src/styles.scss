@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@600;700;800;900&family=Noto+Sans+TC:wght@400;500;700&family=VT323&display=swap');
+
+:root {
+  --color-canvas: #fffdf8;
+  --color-paper: #ffffff;
+  --color-ink: #0a0a0a;
+  --color-yellow: #ecb22e;
+  --color-magenta: #e01e5a;
+  --color-gray: #f3f3f3;
+  --font-title: 'VT323', monospace;
+  --font-pixel: 'VT323', monospace;
+  --font-display: 'Azeret Mono', monospace;
+  --font-body: 'Noto Sans TC', sans-serif;
+  --border-pixel: 2px solid var(--color-ink);
+  --shadow-yellow: 8px 8px 0 var(--color-yellow);
+  --shadow-magenta: 8px 8px 0 var(--color-magenta);
+  --content-width: 1280px;
+  --page-padding: 80px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; background: var(--color-canvas); color: var(--color-ink); font-family: var(--font-body); font-size: 20px; }
+button, input, textarea { font: inherit; }
+button, a { color: inherit; }
+button { cursor: pointer; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid var(--color-magenta); outline-offset: 4px; }
+::selection { color: white; background: var(--color-magenta); }
+
+@media (max-width: 1023px) {
+  :root { --page-padding: 40px; --shadow-yellow: 7px 7px 0 var(--color-yellow); --shadow-magenta: 7px 7px 0 var(--color-magenta); }
+}
+
+@media (max-width: 767px) {
+  :root { --page-padding: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
